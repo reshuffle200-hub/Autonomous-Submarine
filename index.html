@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Modular UUV with 3D-printed shell and aluminum pressure hull — Auburn University Senior Design capstone." />
+  <title>Modular UUV — Auburn Senior Design</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sticky navigation -->
+  <header class="nav" id="top">
+    <nav class="nav__inner">
+      <a class="nav__brand" href="#top">
+        <span class="nav__mark" aria-hidden="true">◈</span>
+        <span>Modular&nbsp;UUV</span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#concept">Concept</a></li>
+        <li><a href="#specs">Specs</a></li>
+        <li><a href="#modular">Modular Design</a></li>
+        <li><a href="#team">Team</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Auburn University · Senior Design Capstone</p>
+      <h1 class="hero__title">Modular UUV<span class="hero__title-sub">3D-Printed Shell · Aluminum Pressure Hull</span></h1>
+      <p class="hero__lead">
+        An 8–10&nbsp;ft class unmanned underwater vehicle built around a 3D-printed
+        modular shell and an aluminum pressure hull — engineered for autonomous
+        missions with acoustic communication.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#concept">Explore the Concept</a>
+        <a class="btn btn--ghost" href="#specs">View Specs</a>
+      </div>
+    </div>
+    <a class="hero__scroll" href="#concept" aria-label="Scroll to concept">▾</a>
+  </section>
+
+  <main>
+    <!-- Concept -->
+    <section class="section" id="concept">
+      <div class="section__inner">
+        <p class="section__kicker">01 — Concept</p>
+        <h2 class="section__title">Overview</h2>
+        <div class="prose">
+          <p>
+            Our capstone project designs a mid-size unmanned underwater vehicle (UUV)
+            that balances the payload capacity of larger platforms with the flexibility
+            and low cost of additive manufacturing. A rigid <strong>aluminum pressure hull</strong>
+            protects the electronics and battery systems at depth, while an outer
+            <strong>3D-printed modular shell</strong> shapes the hydrodynamics and lets us
+            swap payload and sensor bays without redesigning the core vehicle.
+          </p>
+          <p>
+            The vehicle is intended to run <strong>autonomous missions</strong> — surveying,
+            data collection, and station-keeping — while staying reachable through
+            <strong>acoustic communication</strong> underwater and RF/Satcom links at the surface.
+            The modular architecture keeps the platform serviceable, repairable, and
+            upgradeable across mission profiles.
+          </p>
+        </div>
+
+        <div class="pillars">
+          <article class="pillar">
+            <div class="pillar__icon" aria-hidden="true">🖨️</div>
+            <h3>3D-Printed Shell</h3>
+            <p>Rapidly iterated, repairable outer body that houses swappable payload and sensor modules.</p>
+          </article>
+          <article class="pillar">
+            <div class="pillar__icon" aria-hidden="true">🛡️</div>
+            <h3>Aluminum Pressure Hull</h3>
+            <p>Rigid, corrosion-resistant core that keeps electronics and power dry under pressure.</p>
+          </article>
+          <article class="pillar">
+            <div class="pillar__icon" aria-hidden="true">🧭</div>
+            <h3>Autonomous Missions</h3>
+            <p>Onboard autonomy for surveying and station-keeping, with operator override on demand.</p>
+          </article>
+          <article class="pillar">
+            <div class="pillar__icon" aria-hidden="true">📡</div>
+            <h3>Acoustic Comms</h3>
+            <p>Underwater acoustic link for command and telemetry, with RF/Satcom at the surface.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specs -->
+    <section class="section section--alt" id="specs">
+      <div class="section__inner">
+        <p class="section__kicker">02 — Specifications</p>
+        <h2 class="section__title">Key Specs</h2>
+        <p class="section__note">All figures are preliminary design targets and <strong>subject to change</strong> as the project develops.</p>
+
+        <div class="specs">
+          <div class="spec">
+            <div class="spec__value">~9  ft</div>
+            <div class="spec__label">Overall Length</div>
+            <div class="spec__detail">8–10 ft class vehicle</div>
+          </div>
+          <div class="spec">
+            <div class="spec__value">48 V</div>
+            <div class="spec__label">Propulsion</div>
+            <div class="spec__detail">Electric drive system</div>
+          </div>
+          <div class="spec">
+            <div class="spec__value">Acoustic</div>
+            <div class="spec__label">Comms (Subsea)</div>
+            <div class="spec__detail">RF / Satcom at surface</div>
+          </div>
+          <div class="spec">
+            <div class="spec__value">Autonomous</div>
+            <div class="spec__label">Control Mode</div>
+            <div class="spec__detail">With remote override</div>
+          </div>
+        </div>
+        <p class="specs__disclaimer">⚠ Subject to change — values reflect current concept-phase targets, not final requirements.</p>
+      </div>
+    </section>
+
+    <!-- Modular Design -->
+    <section class="section" id="modular">
+      <div class="section__inner">
+        <p class="section__kicker">03 — Architecture</p>
+        <h2 class="section__title">Modular Design</h2>
+        <div class="prose">
+          <p>
+            The vehicle is organized into discrete sections along its length. Each section
+            of the 3D-printed shell can be printed, tested, and replaced independently,
+            wrapping around the continuous aluminum pressure hull that runs through the core.
+          </p>
+        </div>
+
+        <ol class="modules">
+          <li class="module">
+            <span class="module__num">A</span>
+            <div>
+              <h3>Nose &amp; Sensors</h3>
+              <p>Forward payload bay for sonar, cameras, and mission-specific sensors.</p>
+            </div>
+          </li>
+          <li class="module">
+            <span class="module__num">B</span>
+            <div>
+              <h3>Pressure Hull</h3>
+              <p>Aluminum core housing avionics, autonomy compute, and the battery pack.</p>
+            </div>
+          </li>
+          <li class="module">
+            <span class="module__num">C</span>
+            <div>
+              <h3>Comms Bay</h3>
+              <p>Acoustic transducer plus RF/Satcom hardware for surfaced links.</p>
+            </div>
+          </li>
+          <li class="module">
+            <span class="module__num">D</span>
+            <div>
+              <h3>Propulsion &amp; Control</h3>
+              <p>48 V electric thruster and control surfaces at the tail section.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section section--alt" id="team">
+      <div class="section__inner">
+        <p class="section__kicker">04 — The Team</p>
+        <h2 class="section__title">Auburn Senior Design Team</h2>
+        <div class="team">
+          <article class="member"><div class="member__avatar" aria-hidden="true">ND</div><h3>Nathan Dechachutinan</h3></article>
+          <article class="member"><div class="member__avatar" aria-hidden="true">RD</div><h3>Ryley Dubose</h3></article>
+          <article class="member"><div class="member__avatar" aria-hidden="true">KH</div><h3>Kyle Hakel</h3></article>
+          <article class="member"><div class="member__avatar" aria-hidden="true">RH</div><h3>Reid Humphrey</h3></article>
+          <article class="member"><div class="member__avatar" aria-hidden="true">EZ</div><h3>Ethan Zecher</h3></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p><strong>Modular UUV</strong> — 3D-Printed Shell</p>
+      <p class="footer__muted">Auburn University · Senior Design Capstone · Concept Showcase</p>
+      <p class="footer__muted">Specifications are preliminary and subject to change.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
