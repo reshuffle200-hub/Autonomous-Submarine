@@ -6,7 +6,7 @@ An **8–10 ft class unmanned underwater vehicle (UUV)** built around a
 **3D-printed modular shell** and an **aluminum pressure hull**, designed for
 autonomous missions with acoustic communication.
 
-> ⚠️ All specifications on the site are preliminary concept-phase targets and are **subject to change**.
+> All specifications on the site are preliminary and are **subject to change**.
 
 ## Site
 
