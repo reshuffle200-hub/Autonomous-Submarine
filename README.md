@@ -49,7 +49,7 @@ For a permanent URL, merge this branch into `main` and point Pages at `main` / r
 ## Key specs (subject to change)
 
 - **Length:** ~9 ft (8–10 ft class)
-- **Propulsion:** 48 V electric
+- **Propulsion:** 24 V electric
 - **Comms:** Acoustic (subsea) + RF/Satcom (surface)
 - **Control:** Autonomous with remote override
 
