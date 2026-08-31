@@ -1,6 +1,6 @@
-# Modular UUV — 3D-Printed Shell
+# Modular UUV — 3D-Printed Shell · Team 14
 
-Project-showcase website for our **Auburn University Senior Design** capstone.
+Project-showcase website for our **Auburn University Senior Design** capstone (**Team 14**).
 
 An **8–10 ft class unmanned underwater vehicle (UUV)** built around a
 **3D-printed modular shell** and an **aluminum pressure hull**, designed for
@@ -17,7 +17,15 @@ A plain static site — no build step, no dependencies.
 | `index.html` | Page markup and content (nav, hero, concept, specs, modular design, team) |
 | `styles.css` | Dark naval theme and responsive layout |
 | `script.js`  | Mobile nav toggle and reveal-on-scroll effects |
+| `images/`    | Team headshots (see `images/README.md` for filenames) |
 | `README.md`  | This file |
+
+## Team headshots
+
+Add each member's photo to `images/` using the exact filenames listed in
+`images/README.md` (`nathan.jpg`, `ryley.jpg`, `kyle.jpg`, `reid.jpg`,
+`ethan.jpg`). Until a photo is present, that card shows the member's initials,
+so the launch page always renders cleanly.
 
 ## Run locally
 
