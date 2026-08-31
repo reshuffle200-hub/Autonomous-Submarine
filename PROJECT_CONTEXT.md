@@ -11,7 +11,7 @@ teammate) to pick up this work cold.
 - **Mission profile:** autonomous missions with acoustic communication
 - **Key specs (all preliminary / subject to change):**
   - Length ~9 ft (8–10 ft class)
-  - 24 V electric propulsion
+  - 48 V battery, 24 V thruster
   - Comms: acoustic (subsea) + RF/Satcom (surface)
   - Control: autonomous with remote override
 - **Team (Auburn):** Nathan Dechachutinan, Ryley Dubose, Kyle Hakel, Reid Humphrey, Ethan Zecher
