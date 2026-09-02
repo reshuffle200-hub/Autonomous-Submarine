@@ -11,14 +11,6 @@ Drop each member's headshot in this folder using these **exact** filenames
 | `reid.jpg`   | Reid Humphrey | Dothan, AL |
 | `ethan.jpg`  | Ethan Zecher | Madison, AL |
 
-## Gantt chart screenshot
-
-Add a screenshot of the full Gantt chart to this folder as **`gantt.png`**
-(a wide PNG works best). It appears in the site's **Schedule** section. Until
-it is added, that section shows a labeled placeholder. The "View the full Gantt
-chart" button links to the public Google Sheet (set that URL in `index.html`,
-replacing `REPLACE_WITH_GANTT_LINK`).
-
 Notes:
 - Square-ish crops look best (the avatar is a circle). Anything works —
   the image is center-cropped by CSS.
