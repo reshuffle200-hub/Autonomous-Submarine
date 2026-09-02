@@ -284,6 +284,49 @@ a { color: var(--accent); text-decoration: none; }
 .module h3 { margin: 0 0 0.25rem; font-size: 1.1rem; }
 .module p { margin: 0; color: var(--muted); font-size: 0.95rem; }
 
+/* ---------- Gantt / Schedule ---------- */
+.gantt { margin: 2.2rem 0 0; }
+.gantt__frame {
+  position: relative;
+  display: block;
+  min-height: 220px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--panel);
+}
+.gantt__frame img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.gantt__placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 2rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.gantt__placeholder code {
+  color: var(--accent);
+  background: var(--bg-alt);
+  padding: 0.1rem 0.4rem;
+  border-radius: 6px;
+}
+.gantt__link { margin-top: 1.3rem; }
+.gantt__note {
+  margin-top: 1.5rem;
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
 /* ---------- Team ---------- */
 .team {
   display: grid;
