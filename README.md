@@ -14,17 +14,17 @@ A plain static site — no build step, no dependencies.
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Page markup and content (nav, hero, concept, specs, modular design, team) |
+| `index.html` | Page markup and content (nav, hero, concept, specs, modular design, comms, schedule, team) |
 | `styles.css` | Dark naval theme and responsive layout |
 | `script.js`  | Mobile nav toggle and reveal-on-scroll effects |
-| `images/`    | Team headshots (see `images/README.md` for filenames) |
+| `images/`    | Headshots, Gantt chart, comms diagram (see `images/README.md`) |
 | `README.md`  | This file |
 
 ## Team headshots
 
 Add each member's photo to `images/` using the exact filenames listed in
-`images/README.md` (`nathan.jpg`, `ryley.jpg`, `kyle.jpg`, `reid.jpg`,
-`ethan.jpg`). Until a photo is present, that card shows the member's initials,
+`images/README.md` (`Nathan.jpg`, `Ryley.jpg`, `Kyle.jpg`, `Reid.jpg`,
+`Ethan.jpg`). Until a photo is present, that card shows the member's initials,
 so the launch page always renders cleanly.
 
 ## Run locally

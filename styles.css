@@ -428,3 +428,7 @@ a { color: var(--accent); text-decoration: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .hero__scroll { animation: none; }
 }
+
+/* ---------- Communications ---------- */
+#comms .modules { margin-top: 2rem; }
+.comms__scope { margin: 1.5rem 0 0; }

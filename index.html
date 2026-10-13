@@ -22,6 +22,7 @@
         <li><a href="#concept">Concept</a></li>
         <li><a href="#specs">Specs</a></li>
         <li><a href="#modular">Modular Design</a></li>
+        <li><a href="#comms">Comms</a></li>
         <li><a href="#schedule">Schedule</a></li>
         <li><a href="#team">Team</a></li>
       </ul>
@@ -174,10 +175,59 @@
       </div>
     </section>
 
-    <!-- Schedule / Gantt -->
-    <section class="section section--alt" id="schedule">
+    <!-- Communications -->
+    <section class="section section--alt" id="comms">
       <div class="section__inner">
-        <p class="section__kicker">04 · Schedule</p>
+        <p class="section__kicker">04 · Communications</p>
+        <h2 class="section__title">Communications Layout</h2>
+        <p class="section__note">How the UUV stays in contact with the mission team, both underwater and at the surface. Design is in progress and subject to change.</p>
+
+        <figure class="gantt">
+          <a class="gantt__frame" href="images/Communications_Layout.webp" target="_blank" rel="noopener" aria-label="Open full-size communications layout diagram">
+            <img src="images/Communications_Layout.webp"
+                 alt="Communications layout: the mothership and a drone boat link through Starlink satellites; the drone boat talks to the submerged UUV by acoustic comms and to the surfaced UUV by RF comms"
+                 width="2000" height="1120" loading="lazy" />
+          </a>
+        </figure>
+
+        <ol class="modules">
+          <li class="module">
+            <span class="module__num">1</span>
+            <div>
+              <h3>Mothership ↔ Starlink</h3>
+              <p>The mothership reaches the operating area over a Starlink satellite link.</p>
+            </div>
+          </li>
+          <li class="module">
+            <span class="module__num">2</span>
+            <div>
+              <h3>Starlink ↔ Drone Boat</h3>
+              <p>A surface drone boat near the UUV relays traffic between the vehicle and the mothership through Starlink.</p>
+            </div>
+          </li>
+          <li class="module">
+            <span class="module__num">3</span>
+            <div>
+              <h3>Acoustic (Submerged)</h3>
+              <p>While diving, the UUV communicates with the drone boat through acoustic comms.</p>
+            </div>
+          </li>
+          <li class="module">
+            <span class="module__num">4</span>
+            <div>
+              <h3>RF (Surfaced)</h3>
+              <p>When the UUV surfaces, it switches to a higher-bandwidth RF link with the drone boat.</p>
+            </div>
+          </li>
+        </ol>
+        <p class="section__note comms__scope">Our team's comms engineering covers the drone boat ↔ UUV links (acoustic and RF), shown inside the dashed box.</p>
+      </div>
+    </section>
+
+    <!-- Schedule / Gantt -->
+    <section class="section" id="schedule">
+      <div class="section__inner">
+        <p class="section__kicker">05 · Schedule</p>
         <h2 class="section__title">Project Timeline</h2>
         <p class="section__note">Our capstone schedule spans Capstone 1 (Fall 2026) through Capstone 2 (Spring 2027), ending with the close of the spring semester on April 23, 2027.</p>
 
@@ -205,9 +255,9 @@
     </section>
 
     <!-- Team -->
-    <section class="section" id="team">
+    <section class="section section--alt" id="team">
       <div class="section__inner">
-        <p class="section__kicker">05 · The Team</p>
+        <p class="section__kicker">06 · The Team</p>
         <h2 class="section__title">Team 14 · Auburn Senior Design</h2>
         <p class="section__note">Electrical &amp; Computer Engineering · Auburn University</p>
         <div class="team">
