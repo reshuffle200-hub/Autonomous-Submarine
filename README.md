@@ -14,10 +14,10 @@ A plain static site — no build step, no dependencies.
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Page markup and content (nav, hero, concept, specs, modular design, comms, schedule, team) |
+| `index.html` | Page markup and content (nav, hero, concept, specs, progress, architecture, modular design, comms, schedule, team) |
 | `styles.css` | Dark naval theme and responsive layout |
 | `script.js`  | Mobile nav toggle and reveal-on-scroll effects |
-| `images/`    | Headshots, Gantt chart, comms diagram (see `images/README.md`) |
+| `images/`    | Headshots, Gantt chart, architecture and comms diagrams (see `images/README.md`) |
 | `README.md`  | This file |
 
 ## Team headshots

@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Modular UUV with 3D-printed shell and aluminum pressure hull — Auburn University Senior Design capstone." />
   <title>Modular UUV — Auburn Senior Design</title>
+  <meta name="theme-color" content="#0a1420" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Modular UUV — Auburn Senior Design, Team 14" />
+  <meta property="og:description" content="An 8–10 ft class autonomous underwater vehicle with a 3D-printed modular shell, aluminum pressure hull and acoustic communications." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a1420'/%3E%3Cpath d='M32 10 54 32 32 54 10 32Z' fill='none' stroke='%2345c8d8' stroke-width='5'/%3E%3Ccircle cx='32' cy='32' r='6' fill='%2345c8d8'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -21,7 +26,9 @@
       <ul class="nav__links" id="navLinks">
         <li><a href="#concept">Concept</a></li>
         <li><a href="#specs">Specs</a></li>
-        <li><a href="#modular">Modular Design</a></li>
+        <li><a href="#progress">Progress</a></li>
+        <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#modular">Design</a></li>
         <li><a href="#comms">Comms</a></li>
         <li><a href="#schedule">Schedule</a></li>
         <li><a href="#team">Team</a></li>
@@ -42,7 +49,7 @@
       </p>
       <div class="hero__actions">
         <a class="btn btn--primary" href="#concept">Explore the Concept</a>
-        <a class="btn btn--ghost" href="#specs">View Specs</a>
+        <a class="btn btn--ghost" href="#progress">See Our Progress</a>
       </div>
     </div>
     <a class="hero__scroll" href="#concept" aria-label="Scroll to concept">▾</a>
@@ -129,10 +136,84 @@
       </div>
     </section>
 
+    <!-- Progress -->
+    <section class="section" id="progress">
+      <div class="section__inner">
+        <p class="section__kicker">03 · Progress</p>
+        <h2 class="section__title">Work Completed So Far</h2>
+        <p class="section__note">Status as of October 2026 — design and software foundations are in place, with the vehicle proven in simulation and hardware-in-the-loop testing.</p>
+
+        <div class="progress">
+          <article class="progress__group">
+            <h3><span class="progress__icon" aria-hidden="true">⚡</span>Electronics &amp; Hardware</h3>
+            <ul class="checklist">
+              <li>Designed a custom electronics control board, refined over several revisions.</li>
+              <li>Selected the vehicle's sensor suite, with compliance and sourcing checks for each part.</li>
+              <li>Wrote step-by-step bring-up and bench-test procedures for hardware integration.</li>
+            </ul>
+          </article>
+          <article class="progress__group">
+            <h3><span class="progress__icon" aria-hidden="true">🧪</span>Simulation &amp; Testing</h3>
+            <ul class="checklist">
+              <li>Built a full simulation environment, so the software can fly complete missions before touching water.</li>
+              <li>Ran hardware-in-the-loop tests, connecting the real flight computers to a simulated vehicle.</li>
+              <li>Set up automated testing that checks every software change against dozens of mission and fault scenarios.</li>
+            </ul>
+          </article>
+          <article class="progress__group">
+            <h3><span class="progress__icon" aria-hidden="true">💻</span>Firmware &amp; Autonomy</h3>
+            <ul class="checklist">
+              <li>Wrote embedded firmware for real-time sensor handling and thruster control.</li>
+              <li>Built the autonomy software for navigation, mission planning and health monitoring.</li>
+            </ul>
+          </article>
+          <article class="progress__group">
+            <h3><span class="progress__icon" aria-hidden="true">🛡️</span>Safety &amp; Communications</h3>
+            <ul class="checklist">
+              <li>Designed a layered safety system with independent software and hardware stop paths.</li>
+              <li>Integrated underwater acoustic communications into the system design.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- System Architecture -->
+    <section class="section section--alt" id="architecture">
+      <div class="section__inner">
+        <p class="section__kicker">04 · Architecture</p>
+        <h2 class="section__title">System Architecture</h2>
+        <p class="section__note">Power feeds the vehicle's computers. Autonomy plans the mission, Control turns it into thruster commands using navigation and sensor data, and an independent safety path can stop propulsion at any time.</p>
+
+        <figure class="figure">
+          <a class="figure__frame" href="images/System_Architecture.png" target="_blank" rel="noopener" aria-label="Open full-size system architecture diagram">
+            <img src="images/System_Architecture.png"
+                 alt="System architecture: Power feeds Autonomy and Control; Comms exchanges data with Autonomy; Autonomy and Control exchange data; Navigation and Sensors feed Control; Control drives Propulsion; Safety can stop Propulsion"
+                 width="1600" height="860" loading="lazy" />
+          </a>
+        </figure>
+
+        <div class="cards cards--3">
+          <article class="card">
+            <h3>Autonomy</h3>
+            <p>Navigation, mission planning and health monitoring run onboard, with operator override through the comms link.</p>
+          </article>
+          <article class="card">
+            <h3>Control &amp; Propulsion</h3>
+            <p>Real-time embedded firmware reads the sensors and drives the thruster on our custom control board.</p>
+          </article>
+          <article class="card card--safety">
+            <h3>Safety</h3>
+            <p>Layered protection with independent software and hardware stop paths that can halt propulsion.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- Modular Design -->
     <section class="section" id="modular">
       <div class="section__inner">
-        <p class="section__kicker">03 · Architecture</p>
+        <p class="section__kicker">05 · Modular Design</p>
         <h2 class="section__title">Modular Design</h2>
         <div class="prose">
           <p>
@@ -142,7 +223,7 @@
           </p>
         </div>
 
-        <ol class="modules">
+        <ol class="modules modules--grid">
           <li class="module">
             <span class="module__num">A</span>
             <div>
@@ -178,19 +259,19 @@
     <!-- Communications -->
     <section class="section section--alt" id="comms">
       <div class="section__inner">
-        <p class="section__kicker">04 · Communications</p>
+        <p class="section__kicker">06 · Communications</p>
         <h2 class="section__title">Communications Layout</h2>
         <p class="section__note">How the UUV stays in contact with the mission team, both underwater and at the surface. Design is in progress and subject to change.</p>
 
-        <figure class="gantt">
-          <a class="gantt__frame" href="images/Communications_Layout.webp" target="_blank" rel="noopener" aria-label="Open full-size communications layout diagram">
+        <figure class="figure">
+          <a class="figure__frame" href="images/Communications_Layout.webp" target="_blank" rel="noopener" aria-label="Open full-size communications layout diagram">
             <img src="images/Communications_Layout.webp"
                  alt="Communications layout: the mothership and a drone boat link through Starlink satellites; the drone boat talks to the submerged UUV by acoustic comms and to the surfaced UUV by RF comms"
                  width="2000" height="1120" loading="lazy" />
           </a>
         </figure>
 
-        <ol class="modules">
+        <ol class="modules modules--grid">
           <li class="module">
             <span class="module__num">1</span>
             <div>
@@ -220,14 +301,14 @@
             </div>
           </li>
         </ol>
-        <p class="section__note comms__scope">Our team's comms engineering covers the drone boat ↔ UUV links (acoustic and RF), shown inside the dashed box.</p>
+        <p class="section__note section__note--after">Our team's comms engineering covers the drone boat ↔ UUV links (acoustic and RF), shown inside the dashed box.</p>
       </div>
     </section>
 
     <!-- Schedule / Gantt -->
     <section class="section" id="schedule">
       <div class="section__inner">
-        <p class="section__kicker">05 · Schedule</p>
+        <p class="section__kicker">07 · Schedule</p>
         <h2 class="section__title">Project Timeline</h2>
         <p class="section__note">Our capstone schedule spans Capstone 1 (Fall 2026) through Capstone 2 (Spring 2027), ending with the close of the spring semester on April 23, 2027.</p>
 
@@ -257,7 +338,7 @@
     <!-- Team -->
     <section class="section section--alt" id="team">
       <div class="section__inner">
-        <p class="section__kicker">06 · The Team</p>
+        <p class="section__kicker">08 · The Team</p>
         <h2 class="section__title">Team 14 · Auburn Senior Design</h2>
         <p class="section__note">Electrical &amp; Computer Engineering · Auburn University</p>
         <div class="team">
@@ -320,7 +401,7 @@
   <footer class="footer">
     <div class="footer__inner">
       <p>Modular UUV · 3D-Printed Shell</p>
-      <p class="footer__muted">Auburn University · Senior Design Capstone · Concept Showcase</p>
+      <p class="footer__muted">Auburn University · Senior Design Capstone · Team 14 · Fall 2026 – Spring 2027</p>
       <p class="footer__muted">Specifications are preliminary and subject to change.</p>
     </div>
   </footer>

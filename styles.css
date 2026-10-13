@@ -63,7 +63,7 @@ a { color: var(--accent); text-decoration: none; }
 .nav__mark { color: var(--accent); font-size: 1.2rem; }
 .nav__links {
   display: flex;
-  gap: 1.75rem;
+  gap: 1.4rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -328,13 +328,16 @@ a { color: var(--accent); text-decoration: none; }
 }
 
 /* ---------- Team ---------- */
+/* Flex so an odd team size centres the last row (3 + 2) */
 .team {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.4rem;
   margin-top: 2.5rem;
 }
 .member {
+  flex: 0 1 310px;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -387,6 +390,85 @@ a { color: var(--accent); text-decoration: none; }
   line-height: 1.55;
 }
 
+/* ---------- Figures (diagrams) ---------- */
+.figure { margin: 0; }
+.figure__frame {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--panel);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: border-color 0.2s ease;
+}
+.figure__frame:hover { border-color: var(--accent); }
+.figure__frame img { display: block; width: 100%; height: auto; }
+
+/* ---------- Two-column module lists ---------- */
+.modules--grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); }
+.module { height: 100%; }
+.figure + .modules { margin-top: 1.6rem; }
+.section__note--after { margin: 1.5rem 0 0; }
+
+/* ---------- Progress ---------- */
+.progress {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap: 1.2rem;
+}
+.progress__group {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1.6rem 1.6rem 1.4rem;
+}
+.progress__group h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+}
+.progress__icon { font-size: 1.3rem; }
+.checklist { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; }
+.checklist li {
+  position: relative;
+  padding-left: 1.9rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+.checklist li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0.05rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(69, 200, 216, 0.15);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+/* ---------- Cards (under diagrams) ---------- */
+.cards { display: grid; gap: 1.2rem; margin-top: 1.6rem; }
+.cards--3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1.3rem 1.5rem;
+}
+.card h3 { margin: 0 0 0.35rem; font-size: 1.05rem; }
+.card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+.card--safety { border-left-color: #e8866a; }
+
 /* ---------- Footer ---------- */
 .footer {
   background: var(--bg);
@@ -403,7 +485,7 @@ a { color: var(--accent); text-decoration: none; }
 .reveal.is-visible { opacity: 1; transform: none; }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 720px) {
+@media (max-width: 860px) {
   .nav__toggle { display: flex; }
   .nav__links {
     position: absolute;
@@ -418,7 +500,7 @@ a { color: var(--accent); text-decoration: none; }
     overflow: hidden;
     transition: max-height 0.3s ease;
   }
-  .nav__links.is-open { max-height: 320px; }
+  .nav__links.is-open { max-height: 520px; }
   .nav__links li { border-top: 1px solid var(--line); }
   .nav__links a { display: block; padding: 1rem 1.25rem; }
 }
@@ -428,7 +510,3 @@ a { color: var(--accent); text-decoration: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .hero__scroll { animation: none; }
 }
-
-/* ---------- Communications ---------- */
-#comms .modules { margin-top: 2rem; }
-.comms__scope { margin: 1.5rem 0 0; }
