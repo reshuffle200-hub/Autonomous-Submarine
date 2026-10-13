@@ -23,7 +23,7 @@
 
   // Reveal-on-scroll for section content
   var revealTargets = document.querySelectorAll(
-    ".pillar, .spec, .module, .member, .prose, .section__title"
+    ".pillar, .spec, .module, .member, .prose, .section__title, .progress__group, .card, .figure, .gantt"
   );
   revealTargets.forEach(function (el) {
     el.classList.add("reveal");

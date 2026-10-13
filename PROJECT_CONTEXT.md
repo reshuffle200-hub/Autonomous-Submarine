@@ -19,7 +19,7 @@ teammate) to pick up this work cold.
 ## The website
 
 - **Repo:** `reshuffle200-hub/Autonomous-Submarine`
-- **Branch:** `claude/auburn-uuv-showcase-ryaj13` (pushed)
+- **Branch:** `claude/auburn-uuv-showcase-ryaj13` (the repo's default branch; the live site)
 - **Stack:** plain static site — HTML + CSS + a little JS, no build step,
   GitHub Pages–hostable, dark naval theme
 - **Files:**
@@ -28,8 +28,11 @@ teammate) to pick up this work cold.
   - `styles.css` — dark naval theme, responsive
   - `script.js` — mobile nav toggle + reveal-on-scroll
   - `README.md` — overview, local-run, GitHub Pages steps
-- **Not yet done:** no PR into `main`; Pages not yet enabled; specs detail
-  lines and team roles are placeholders.
+  - Sections (Oct 2026): Concept, Specs, Progress (work completed), System
+    Architecture diagram, Modular Design, Communications diagram, Schedule
+    (Gantt), Team
+- **Still to do:** specs detail lines and team roles are placeholders; add
+  "up next" milestones to Progress.
 
 ## Deploy (GitHub Pages)
 
