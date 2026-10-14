@@ -2,6 +2,7 @@
 
 - `UUV_Capstone_Gantt_Chart_Google_Sheets_Web_HighRes.png` — Schedule section
 - `System_Architecture.png` — System Architecture section
+- `Power_Distribution.webp` — Power Distribution section
 - `Communications_Layout.webp` — Communications section
 
 ## Team headshots

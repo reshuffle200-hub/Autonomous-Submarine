@@ -485,7 +485,7 @@ a { color: var(--accent); text-decoration: none; }
 .reveal.is-visible { opacity: 1; transform: none; }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 860px) {
+@media (max-width: 1000px) {
   .nav__toggle { display: flex; }
   .nav__links {
     position: absolute;
