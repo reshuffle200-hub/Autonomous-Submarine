@@ -28,6 +28,7 @@
         <li><a href="#specs">Specs</a></li>
         <li><a href="#progress">Progress</a></li>
         <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#power">Power</a></li>
         <li><a href="#modular">Design</a></li>
         <li><a href="#comms">Comms</a></li>
         <li><a href="#schedule">Schedule</a></li>
@@ -210,10 +211,42 @@
       </div>
     </section>
 
-    <!-- Modular Design -->
-    <section class="section" id="modular">
+    <!-- Power Distribution -->
+    <section class="section" id="power">
       <div class="section__inner">
-        <p class="section__kicker">05 · Modular Design</p>
+        <p class="section__kicker">05 · Power</p>
+        <h2 class="section__title">Power Distribution</h2>
+        <p class="section__note">The battery feeds a main bus through a switch, a fuse and a current-sensing shunt. Every load has its own fuse; the thrusters and acoustic modem run at battery voltage, while two 5 V converters supply the computers and sensors.</p>
+
+        <figure class="figure">
+          <a class="figure__frame" href="images/Power_Distribution.webp" target="_blank" rel="noopener" aria-label="Open full-size power distribution diagram">
+            <img src="images/Power_Distribution.webp"
+                 alt="Power distribution: battery through a switch, fuse and shunt with INA228 to a main bus; individually fused branches feed four thrusters, the acoustic modem, a 5 V 5.5 A converter for the Raspberry Pi 5 and a 5 V 3.2 A converter for the Teensy and sensors; the INA228 reports to the Teensy"
+                 width="2000" height="1086" loading="lazy" />
+          </a>
+        </figure>
+
+        <div class="cards cards--3">
+          <article class="card">
+            <h3>Protection</h3>
+            <p>A main switch and fuse at the battery, plus an individual fuse on every branch, so a fault on one load can't take down the rest of the vehicle.</p>
+          </article>
+          <article class="card">
+            <h3>Monitoring</h3>
+            <p>A shunt with an INA228 power monitor measures battery current and voltage and reports it to the Teensy for health monitoring.</p>
+          </article>
+          <article class="card">
+            <h3>Regulation</h3>
+            <p>Separate 5 V converters power the Raspberry Pi 5 (5.5 A) and the Teensy and sensors (3.2 A), keeping compute and sensing on their own supplies.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modular Design -->
+    <section class="section section--alt" id="modular">
+      <div class="section__inner">
+        <p class="section__kicker">06 · Modular Design</p>
         <h2 class="section__title">Modular Design</h2>
         <div class="prose">
           <p>
@@ -257,9 +290,9 @@
     </section>
 
     <!-- Communications -->
-    <section class="section section--alt" id="comms">
+    <section class="section" id="comms">
       <div class="section__inner">
-        <p class="section__kicker">06 · Communications</p>
+        <p class="section__kicker">07 · Communications</p>
         <h2 class="section__title">Communications Layout</h2>
         <p class="section__note">How the UUV stays in contact with the mission team, both underwater and at the surface. Design is in progress and subject to change.</p>
 
@@ -306,9 +339,9 @@
     </section>
 
     <!-- Schedule / Gantt -->
-    <section class="section" id="schedule">
+    <section class="section section--alt" id="schedule">
       <div class="section__inner">
-        <p class="section__kicker">07 · Schedule</p>
+        <p class="section__kicker">08 · Schedule</p>
         <h2 class="section__title">Project Timeline</h2>
         <p class="section__note">Our capstone schedule spans Capstone 1 (Fall 2026) through Capstone 2 (Spring 2027), ending with the close of the spring semester on April 23, 2027.</p>
 
@@ -336,9 +369,9 @@
     </section>
 
     <!-- Team -->
-    <section class="section section--alt" id="team">
+    <section class="section" id="team">
       <div class="section__inner">
-        <p class="section__kicker">08 · The Team</p>
+        <p class="section__kicker">09 · The Team</p>
         <h2 class="section__title">Team 14 · Auburn Senior Design</h2>
         <p class="section__note">Electrical &amp; Computer Engineering · Auburn University</p>
         <div class="team">

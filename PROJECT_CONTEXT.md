@@ -29,7 +29,7 @@ teammate) to pick up this work cold.
   - `script.js` — mobile nav toggle + reveal-on-scroll
   - `README.md` — overview, local-run, GitHub Pages steps
   - Sections (Oct 2026): Concept, Specs, Progress (work completed), System
-    Architecture diagram, Modular Design, Communications diagram, Schedule
+    Architecture diagram, Power Distribution diagram, Modular Design, Communications diagram, Schedule
     (Gantt), Team
 - **Still to do:** specs detail lines and team roles are placeholders; add
   "up next" milestones to Progress.
